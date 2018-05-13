@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="app_bar_height">230dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="section_margin">16dp</dimen>
+    <dimen name="home_button_height">72dp</dimen>
+    <dimen name="home_button_width">72dp</dimen>
+    <dimen name="logo">88dp</dimen>
+    <dimen name="logo_padding">8dp</dimen>
+</resources>
