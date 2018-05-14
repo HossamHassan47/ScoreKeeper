@@ -9,4 +9,7 @@
     <color name="background_AmericanFootball">#00BCD4</color>
     <color name="background_Baseball">#FFB300</color>
     <color name="background_Football">#009688</color>
+
+    <color name="team_red">#B71C1C</color>
+    <color name="team_blue">#283593</color>
 </resources>

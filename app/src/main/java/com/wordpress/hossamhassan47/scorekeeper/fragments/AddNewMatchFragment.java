@@ -1,5 +1,6 @@
 package com.wordpress.hossamhassan47.scorekeeper.fragments;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -19,6 +20,8 @@ import com.wordpress.hossamhassan47.scorekeeper.R;
 public class AddNewMatchFragment extends DialogFragment {
 
     NoticeDialogListener mListener;
+    String strGameType;
+
 
     @Override
     public void onAttach(Activity activity) {
@@ -40,12 +43,14 @@ public class AddNewMatchFragment extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.fragment_add_new_match, null);
 
+        strGameType = getArguments().getString("gameType");
+
         // Player 1
         //spinnerPlayer1 = view.findViewById(R.id.spinner_player_1);
 
-        builder.setTitle("Teams")
+        builder.setTitle(getResources().getString(R.string.dialog_team_details))
                 .setView(view)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
                         //Player selectedPlayer1 = (Player) spinnerPlayer1.getSelectedItem();
@@ -56,14 +61,16 @@ public class AddNewMatchFragment extends DialogFragment {
 //                            return;
 //                        }
 
+//Intent i = new Intent(MainActivity.this, CupsActivity.class);
+                        //startActivity(i);
 
                         // Send the positive button event back to the host activity
-                        Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), strGameType, Toast.LENGTH_SHORT).show();
 
                         mListener.onDialogPositiveClick(AddNewMatchFragment.this);
                     }
                 })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setNegativeButton(getResources().getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         AddNewMatchFragment.this.getDialog().cancel();
                     }

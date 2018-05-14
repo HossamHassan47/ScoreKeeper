@@ -26,9 +26,11 @@ public class MainActivity extends AppCompatActivity implements NoticeDialogListe
             @Override
             public void onClick(View view) {
                 AddNewMatchFragment fragment = new AddNewMatchFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("gameType", "baseball");
+                fragment.setArguments(bundle);
                 fragment.show(getSupportFragmentManager(), "dialog_AddNewMatchFragment");
-                //Intent i = new Intent(MainActivity.this, CupsActivity.class);
-                //startActivity(i);
+
             }
         });
 
@@ -37,9 +39,11 @@ public class MainActivity extends AppCompatActivity implements NoticeDialogListe
         americanFootball.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "American Football", Toast.LENGTH_SHORT).show();
-                //Intent i = new Intent(MainActivity.this, CupsActivity.class);
-                //startActivity(i);
+                AddNewMatchFragment fragment = new AddNewMatchFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("gameType", "american_football");
+                fragment.setArguments(bundle);
+                fragment.show(getSupportFragmentManager(), "dialog_AddNewMatchFragment");
             }
         });
 
@@ -48,9 +52,11 @@ public class MainActivity extends AppCompatActivity implements NoticeDialogListe
         football.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Football", Toast.LENGTH_SHORT).show();
-                //Intent i = new Intent(MainActivity.this, CupsActivity.class);
-                //startActivity(i);
+                AddNewMatchFragment fragment = new AddNewMatchFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("gameType", "football");
+                fragment.setArguments(bundle);
+                fragment.show(getSupportFragmentManager(), "dialog_AddNewMatchFragment");
             }
         });
     }

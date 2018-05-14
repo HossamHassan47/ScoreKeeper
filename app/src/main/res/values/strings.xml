@@ -4,6 +4,10 @@
     <string name="football">Football</string>
     <string name="baseball">Baseball </string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+
+    <string name="dialog_team_details">Team Details</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
 </resources>

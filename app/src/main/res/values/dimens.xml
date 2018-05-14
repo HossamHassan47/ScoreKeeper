@@ -7,4 +7,5 @@
     <dimen name="home_button_width">72dp</dimen>
     <dimen name="logo">88dp</dimen>
     <dimen name="logo_padding">8dp</dimen>
+    <dimen name="team_color_width">6dp</dimen>
 </resources>
