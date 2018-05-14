@@ -1,6 +1,7 @@
-package com.wordpress.hossamhassan47.scorekeeper;
+package com.wordpress.hossamhassan47.scorekeeper.activities;
 
 import android.content.Intent;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,22 +9,24 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.wordpress.hossamhassan47.scorekeeper.R;
+import com.wordpress.hossamhassan47.scorekeeper.fragments.AddNewMatchFragment;
+import com.wordpress.hossamhassan47.scorekeeper.fragments.NoticeDialogListener;
+
+public class MainActivity extends AppCompatActivity implements NoticeDialogListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Button btnAmericanFootball = findViewById(R.id.button_american_football);
-        //btnAmericanFootball.getBackground().setAlpha(50);
-
         // baseball
         LinearLayout baseball = findViewById(R.id.linear_layout_baseball);
         baseball.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Baseball", Toast.LENGTH_SHORT).show();
+                AddNewMatchFragment fragment = new AddNewMatchFragment();
+                fragment.show(getSupportFragmentManager(), "dialog_AddNewMatchFragment");
                 //Intent i = new Intent(MainActivity.this, CupsActivity.class);
                 //startActivity(i);
             }
@@ -50,5 +53,15 @@ public class MainActivity extends AppCompatActivity {
                 //startActivity(i);
             }
         });
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+
+    }
+
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+
     }
 }
