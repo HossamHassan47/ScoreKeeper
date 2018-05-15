@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,15 +9,193 @@
     tools:context=".activities.FootballActivity"
     tools:showIn="@layout/activity_football">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/background_Football">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <!--icon-->
+        <FrameLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@mipmap/football" />
-    </FrameLayout>
-</LinearLayout>
+            android:background="@color/background_Football">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/football" />
+        </FrameLayout>
+
+        <!--team name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_team_a_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/team_name_height"
+                android:layout_weight="1"
+                android:background="@color/team_red_900"
+                android:gravity="center"
+                android:padding="@dimen/team_name_padding"
+                android:text="Team A"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_view_team_b_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/team_name_height"
+                android:layout_weight="1"
+                android:background="@color/team_blue_800"
+                android:gravity="center"
+                android:padding="@dimen/team_name_padding"
+                android:text="Team B"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--goals-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/team_red_800"
+                android:gravity="right"
+                android:text="Go"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/team_blue_700"
+                android:gravity="left"
+                android:text="als"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/baseball_score_height_runs"
+                android:layout_weight="1"
+                android:background="@color/team_red_700">
+
+                <TextView
+                    android:id="@+id/text_view_team_a_score_goals"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/baseball_score_height_runs"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/baseball_score_padding"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/baseball_score_text_size_runs"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/baseball_score_height_runs"
+                android:layout_weight="1"
+                android:background="@color/team_blue_600">
+
+                <TextView
+                    android:id="@+id/text_view_team_b_score_goals"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/baseball_score_height_runs"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/baseball_score_padding"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/baseball_score_text_size_runs"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!--fouls-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/team_red_800"
+                android:gravity="right"
+                android:text="Fo"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/team_blue_700"
+                android:gravity="left"
+                android:text="uls"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/baseball_score_height_outs"
+                android:layout_weight="1"
+                android:background="@color/team_red_700">
+
+                <TextView
+                    android:id="@+id/text_view_team_a_score_fouls"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/baseball_score_height_outs"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/baseball_score_padding"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/baseball_score_text_size_outs"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/baseball_score_height_outs"
+                android:layout_weight="1"
+                android:background="@color/team_blue_600">
+
+                <TextView
+                    android:id="@+id/text_view_team_b_score_fouls"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/baseball_score_height_outs"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/baseball_score_padding"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/baseball_score_text_size_outs"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

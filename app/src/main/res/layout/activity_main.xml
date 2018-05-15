@@ -15,7 +15,6 @@
             android:layout_width="@dimen/logo"
             android:layout_height="@dimen/logo"
             android:layout_gravity="center"
-            android:padding="@dimen/logo_padding"
             android:src="@mipmap/ic_launcher" />
 
         <!--baseball -->
@@ -24,7 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/text_margin"
             android:layout_marginRight="@dimen/text_margin"
-            android:layout_marginTop="@dimen/text_margin"
             android:background="@color/background_Baseball">
 
             <LinearLayout
