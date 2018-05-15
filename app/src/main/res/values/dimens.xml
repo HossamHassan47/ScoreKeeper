@@ -14,9 +14,9 @@
     <dimen name="team_name_height">64dp</dimen>
     <dimen name="team_name_padding">4dp</dimen>
 
-    <dimen name="baseball_score_padding">4dp</dimen>
-    <dimen name="baseball_score_height_runs">160dp</dimen>
-    <dimen name="baseball_score_text_size_runs">96sp</dimen>
-    <dimen name="baseball_score_height_outs">140dp</dimen>
-    <dimen name="baseball_score_text_size_outs">72sp</dimen>
+    <dimen name="score_padding">4dp</dimen>
+    <dimen name="score_height_runs">160dp</dimen>
+    <dimen name="score_text_size_runs">96sp</dimen>
+    <dimen name="score_height_outs">140dp</dimen>
+    <dimen name="score_text_size_outs">72sp</dimen>
 </resources>
