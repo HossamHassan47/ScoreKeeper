@@ -8,12 +8,12 @@
 
     <color name="background_AmericanFootball">#00BCD4</color>
     <color name="background_Baseball">#FFB300</color>
-    <color name="background_Football">#009688</color>
+    <color name="background_Football">#8BC34A</color>
 
-    <color name="team_red_900">#B71C1C</color>
-    <color name="team_red_800">#C62828</color>
-    <color name="team_red_700">#D32F2F</color>
-    <color name="team_blue_800">#283593</color>
-    <color name="team_blue_700">#303F9F</color>
-    <color name="team_blue_600">#3949AB</color>
+    <color name="team_red_900">#D32F2F</color>
+    <color name="team_red_800">#E53935</color>
+    <color name="team_red_700">#F44336</color>
+    <color name="team_blue_800">#303F9F</color>
+    <color name="team_blue_700">#3949AB</color>
+    <color name="team_blue_600">#3F51B5</color>
 </resources>

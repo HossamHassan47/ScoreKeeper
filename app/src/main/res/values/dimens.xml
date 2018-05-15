@@ -19,4 +19,6 @@
     <dimen name="score_text_size_runs">96sp</dimen>
     <dimen name="score_height_outs">140dp</dimen>
     <dimen name="score_text_size_outs">72sp</dimen>
+
+    <dimen name="score_points_padding">4dp</dimen>
 </resources>

@@ -16,11 +16,27 @@
                             <entry key="actionbar">
                               <value>
                                 <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="textAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="fontFamily" value="Agency FB" />
+                                                <entry key="text" value="+1" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="assetType" value="TEXT" />
                                       <entry key="imageAsset" value="D:\baseline_undo_white_48dp.png" />
-                                      <entry key="outputName" value="ic_action_reset" />
+                                      <entry key="outputName" value="ic_points_1" />
                                       <entry key="theme" value="HOLO_DARK" />
                                     </map>
                                   </option>
