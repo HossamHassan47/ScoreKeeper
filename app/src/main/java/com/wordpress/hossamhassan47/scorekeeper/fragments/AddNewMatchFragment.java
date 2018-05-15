@@ -13,6 +13,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.wordpress.hossamhassan47.scorekeeper.R;
@@ -21,7 +22,8 @@ public class AddNewMatchFragment extends DialogFragment {
 
     NoticeDialogListener mListener;
     String strGameType;
-
+    EditText txtTeamA;
+    EditText txtTeamB;
 
     @Override
     public void onAttach(Activity activity) {
@@ -45,23 +47,39 @@ public class AddNewMatchFragment extends DialogFragment {
 
         strGameType = getArguments().getString("gameType");
 
-        // Player 1
-        //spinnerPlayer1 = view.findViewById(R.id.spinner_player_1);
+        // Team A
+        txtTeamA = view.findViewById(R.id.edit_text_team_a);
+
+        // Team B
+        txtTeamA = view.findViewById(R.id.edit_text_team_b);
 
         builder.setTitle(getResources().getString(R.string.dialog_team_details))
                 .setView(view)
                 .setPositiveButton(getResources().getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //Player selectedPlayer1 = (Player) spinnerPlayer1.getSelectedItem();
-                        //Player selectedPlayer2 = (Player) spinnerPlayer2.getSelectedItem();
+                        String teamA = txtTeamA.getText().toString();
+                        String teamB = txtTeamB.getText().toString();
 
-//                        if (selectedPlayer1.playerId == selectedPlayer2.playerId) {
-//                            Toast.makeText(getActivity(), "Players should be different, try again.", Toast.LENGTH_SHORT).show();
-//                            return;
-//                        }
+                        if (teamA == null || teamA.isEmpty()) {
+                            Toast.makeText(getActivity(), "Please enter Team A.", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
 
-//Intent i = new Intent(MainActivity.this, CupsActivity.class);
+                        if (teamB == null || teamB.isEmpty()) {
+                            Toast.makeText(getActivity(), "Please enter Team B.", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                        if (strGameType == "baseball") {
+
+                        } else if (strGameType == "american_football") {
+
+                        } else if (strGameType == "football") {
+
+                        }
+
+                        //Intent i = new Intent(MainActivity.this, CupsActivity.class);
                         //startActivity(i);
 
                         // Send the positive button event back to the host activity

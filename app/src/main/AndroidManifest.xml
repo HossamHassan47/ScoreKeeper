@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.BaseballActivity"
+            android:label="@string/title_activity_baseball"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.AmericanFootballActivity"
+            android:label="@string/title_activity_american_football"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.FootballActivity"
+            android:label="@string/title_activity_football"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
