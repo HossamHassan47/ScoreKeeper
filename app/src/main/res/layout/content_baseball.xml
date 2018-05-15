@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,4 +8,193 @@
     tools:context=".activities.BaseballActivity"
     tools:showIn="@layout/activity_baseball">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--icon-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_Baseball">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/baseball" />
+        </FrameLayout>
+
+        <!--team name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_team_a_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/team_name_height"
+                android:layout_weight="1"
+                android:background="@color/team_red_900"
+                android:gravity="center"
+                android:padding="@dimen/team_name_padding"
+                android:text="Team A"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_view_team_b_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/team_name_height"
+                android:layout_weight="1"
+                android:background="@color/team_blue_800"
+                android:gravity="center"
+                android:padding="@dimen/team_name_padding"
+                android:text="Team B"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--runs-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/team_red_800"
+                android:gravity="right"
+                android:text="Ru"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/team_blue_700"
+                android:gravity="left"
+                android:text="ns"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/baseball_score_height_runs"
+                android:layout_weight="1"
+                android:background="@color/team_red_700">
+
+                <TextView
+                    android:id="@+id/text_view_team_a_score_runs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/baseball_score_height_runs"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/baseball_score_padding"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/baseball_score_text_size_runs"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/baseball_score_height_runs"
+                android:layout_weight="1"
+                android:background="@color/team_blue_600">
+
+                <TextView
+                    android:id="@+id/text_view_team_b_score_runs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/baseball_score_height_runs"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/baseball_score_padding"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/baseball_score_text_size_runs"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!--outs-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/team_red_800"
+                android:gravity="right"
+                android:text="Ou"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/team_blue_700"
+                android:gravity="left"
+                android:text="ts"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/baseball_score_height_outs"
+                android:layout_weight="1"
+                android:background="@color/team_red_700">
+
+                <TextView
+                    android:id="@+id/text_view_team_a_score_outs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/baseball_score_height_outs"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/baseball_score_padding"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/baseball_score_text_size_outs"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/baseball_score_height_outs"
+                android:layout_weight="1"
+                android:background="@color/team_blue_600">
+
+                <TextView
+                    android:id="@+id/text_view_team_b_score_outs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/baseball_score_height_outs"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/baseball_score_padding"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/baseball_score_text_size_outs"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

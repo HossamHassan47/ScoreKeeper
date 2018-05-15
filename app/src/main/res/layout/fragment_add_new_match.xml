@@ -20,7 +20,7 @@
             <View
                 android:layout_width="@dimen/team_color_width"
                 android:layout_height="match_parent"
-                android:background="@color/team_red" />
+                android:background="@color/team_red_900" />
 
             <EditText
                 android:id="@+id/edit_text_team_a"
@@ -42,7 +42,7 @@
             <View
                 android:layout_width="@dimen/team_color_width"
                 android:layout_height="match_parent"
-                android:background="@color/team_blue" />
+                android:background="@color/team_blue_800" />
 
             <EditText
                 android:id="@+id/edit_text_team_b"
