@@ -1,13 +1,10 @@
 package com.wordpress.hossamhassan47.scorekeeper.activities;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.wordpress.hossamhassan47.scorekeeper.R;
 import com.wordpress.hossamhassan47.scorekeeper.fragments.AddNewMatchFragment;

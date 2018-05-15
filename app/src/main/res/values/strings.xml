@@ -10,7 +10,8 @@
     <string name="dialog_team_details">Team Details</string>
     <string name="dialog_ok">OK</string>
     <string name="dialog_cancel">Cancel</string>
-    <string name="title_activity_baseball">BaseballActivity</string>
-    <string name="title_activity_american_football">AmericanFootballActivity</string>
-    <string name="title_activity_football">FootballActivity</string>
+
+    <string name="title_activity_baseball">Baseball</string>
+    <string name="title_activity_american_football">American Football</string>
+    <string name="title_activity_football">Football</string>
 </resources>

@@ -1,22 +1,21 @@
 package com.wordpress.hossamhassan47.scorekeeper.fragments;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.wordpress.hossamhassan47.scorekeeper.R;
+import com.wordpress.hossamhassan47.scorekeeper.activities.AmericanFootballActivity;
+import com.wordpress.hossamhassan47.scorekeeper.activities.BaseballActivity;
+import com.wordpress.hossamhassan47.scorekeeper.activities.FootballActivity;
 
 public class AddNewMatchFragment extends DialogFragment {
 
@@ -48,10 +47,10 @@ public class AddNewMatchFragment extends DialogFragment {
         strGameType = getArguments().getString("gameType");
 
         // Team A
-        txtTeamA = view.findViewById(R.id.edit_text_team_a);
+        txtTeamA = (EditText)view.findViewById(R.id.edit_text_team_a);
 
         // Team B
-        txtTeamA = view.findViewById(R.id.edit_text_team_b);
+        txtTeamB = (EditText)view.findViewById(R.id.edit_text_team_b);
 
         builder.setTitle(getResources().getString(R.string.dialog_team_details))
                 .setView(view)
@@ -71,20 +70,21 @@ public class AddNewMatchFragment extends DialogFragment {
                             return;
                         }
 
+                        Intent intent;
+
                         if (strGameType == "baseball") {
-
+                            intent = new Intent(getContext(), BaseballActivity.class);
                         } else if (strGameType == "american_football") {
-
-                        } else if (strGameType == "football") {
-
+                            intent = new Intent(getContext(), AmericanFootballActivity.class);
+                        } else {
+                            intent = new Intent(getContext(), FootballActivity.class);
                         }
 
-                        //Intent i = new Intent(MainActivity.this, CupsActivity.class);
-                        //startActivity(i);
+                        intent.putExtra("teamA", teamA);
+                        intent.putExtra("teamB", teamB);
+                        startActivity(intent);
 
                         // Send the positive button event back to the host activity
-                        Toast.makeText(getActivity(), strGameType, Toast.LENGTH_SHORT).show();
-
                         mListener.onDialogPositiveClick(AddNewMatchFragment.this);
                     }
                 })
